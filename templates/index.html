@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="B.E PROJECT">
+    <meta name="author" content="Group No. 18">
+
+    <!-- Title Page-->
+    <title>Crop Yield Prediction Using ML</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{{url_for('static', filename='vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url_for('static', filename='vendor/datepicker/daterangepicker.css')}}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Crop Yield Prediction</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="form-row">
+                            <div class="name">District</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose District</option>
+                                            <option>AHMEDNAGAR</option>
+                                            <option>AKOLA</option>
+                                            <option>AMRAVATI</option>
+                                            <option>AURANGABAD</option>
+                                            <option>BEED</option>
+                                            <option>BHANDARA</option>
+                                            <option>BULDHANA</option>
+                                            <option>CHANDRAPUR</option>
+                                            <option>DHULE</option>
+                                            <option>GADCHIROLI</option>
+                                            <option>GONDIA</option>
+                                            <option>HINGOLI</option>
+                                            <option>JALGAON</option>
+                                            <option>JALNA</option>
+                                            <option>KOLHAPUR</option>
+                                            <option>LATUR</option>
+                                            <option>MUMBAI</option>
+                                            <option>NAGPUR</option>
+                                            <option>NANDED</option>
+                                            <option>NANDURBAR</option>
+                                            <option>NASHIK</option>
+                                            <option>OSMANABAD</option>
+                                            <option>PALGHAR</option>
+                                            <option>PARBHANI</option>
+                                            <option>PUNE</option>
+                                            <option>RAIGAD</option>
+                                            <option>RATNAGIRI</option>
+                                            <option>SANGLI</option>
+                                            <option>SATARA</option>
+                                            <option>SINDHUDURG</option>
+                                            <option>SOLAPUR</option>
+                                            <option>THANE</option>
+                                            <option>WARDHA</option>
+                                            <option>WASHIM</option>
+                                            <option>YAVATMAL</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Season</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose Season</option>
+                                            <option>Autumn</option>
+                                            <option>Kharif</option>
+                                            <option>Rabi</option>
+                                            <option>Summer</option>
+                                            <option>Whole Year</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Crop</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose Crop</option>
+                                            <option>Maize</option>
+                                            <option>Arhar/Tur</option>
+                                            <option>Bajra</option>
+                                            <option>Gram</option>
+                                            <option>Jowar</option>
+                                            <option>Moong(Green Gram)</option>
+                                            <option>Pulses total</option>
+                                            <option>Ragi</option>
+                                            <option>Rice</option>
+                                            <option>Sugarcane</option>
+                                            <option>Total foodgrain</option>
+                                            <option>Urad</option>
+                                            <option>Other Rabi pulses</option>
+                                            <option>Wheat</option>
+                                            <option>Cotton(lint)</option>
+                                            <option>Castor seed</option>
+                                            <option>Groundnut</option>
+                                            <option>Niger seed</option>
+                                            <option>Other Cereals & Millets</option>
+                                            <option>Other Kharif pulses</option>
+                                            <option>Sesamum</option>
+                                            <option>Soyabean</option>
+                                            <option>Sunflower</option>
+                                            <option>Linseed</option>
+                                            <option>Rapeseed &Mustard</option>
+                                            <option>Safflower</option>
+                                            <option>Small millets</option>
+                                            <option>other oilseeds</option>
+                                            <option>Banana</option>
+                                            <option>Grapes</option>
+                                            <option>Mango</option>
+                                            <option>Onion</option>
+                                            <option>Tomato</option>
+                                            <option>Tobacco</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Area</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="company">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Unit of Prediction</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>Kg's</option>
+                                            <option>Tonne's</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            button {
+
+                                animation-name: example;
+                                animation-duration: 3s;
+                                animation-iteration-count: infinite;
+                            }
+
+                            @keyframes example {
+                                from {
+                                    background-color: red;
+                                }
+
+                                to {
+                                    background-color: greenyellow;
+                                }
+                            }
+                        </style>
+
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Predict</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Jquery JS-->
+    <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+    <!-- Vendor JS-->
+    <!-- <script src="vendor/select2/select2.min.js"></script> -->
+    <script src="{{url_for('static', filename='vendor/select2/select2.min.js')}}"></script>
+    <!-- <script src="vendor/datepicker/moment.min.js"></script> -->
+    <script src="{{url_for('static', filename='vendor/datepicker/moment.min.js')}}"></script>
+    <!-- <script src="vendor/datepicker/daterangepicker.js"></script> -->
+    <script src="{{url_for('static', filename='vendor/datepicker/daterangepicker.js')}}"></script>
+
+    <!-- Main JS-->
+    <script src="{{url_for('static', filename='js/global.js')}}"></script>
+    <!-- <script src="js/global.js"></script> -->
+
+</body>
+
+
+</html>
+<!-- end document-->
